@@ -9,7 +9,13 @@
 
 <url>
   <loc>https://history-zone.github.io/</loc>
-  <lastmod>2025-10-29T20:39:02+00:00</lastmod>
+  <lastmod>2025-11-04T18:33:34+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://history-zone.github.io/units/</loc>
+  <lastmod>2025-10-30T22:23:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
