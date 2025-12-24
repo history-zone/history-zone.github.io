@@ -6,55 +6,132 @@
 <title>History Zone</title>
 
 <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/l7uslhlci/IMG_3504.ico?updatedAt=1764897971514">
+<link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/l7uslhlci/IMG_3504.ico">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #000;
-        color: white;
-    }
+:root {
+    --bg: #050505;
+    --card: rgba(255,255,255,0.08);
+    --accent: #f5c542;
+    --text-muted: #bdbdbd;
+}
 
-    /* Top bar */
-    .top-bar {
-        background: white;
-        color: black;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 25px 40px;
-        font-weight: 800;
-        font-size: 32px;
-    }
+* {
+    box-sizing: border-box;
+}
 
-    .left-logo img {
-        height: 65px;
-    }
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top, #111 0%, #000 60%);
+    color: white;
+}
 
-    .units-btn {
-        font-size: 32px;
-        font-weight: 800;
-        text-decoration: none;
-        color: black;
-    }
+/* Top bar */
+.top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.85);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
 
-    /* Main section */
-    .hero {
-        min-height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background: #000;
-    }
+.left-logo img {
+    height: 55px;
+}
 
-    .hero h1 {
-        font-family: "Brush Script MT", cursive;
-        font-size: 48px;
-        font-weight: normal;
-        color: white;
-    }
+.units-btn {
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 18px;
+    border-radius: 10px;
+    transition: all .2s ease;
+}
+
+.units-btn:hover {
+    background: black;
+    color: white;
+}
+
+/* Hero */
+.hero {
+    min-height: calc(100vh - 95px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 700px;
+    font-size: 20px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.hero-actions {
+    margin-top: 35px;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.primary-btn {
+    background: var(--accent);
+    color: black;
+    font-weight: 800;
+    padding: 14px 26px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(245,197,66,0.35);
+}
+
+.secondary-btn {
+    color: white;
+    border: 2px solid white;
+    padding: 14px 26px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.secondary-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    color: #777;
+}
 </style>
 </head>
 
@@ -70,9 +147,22 @@
 </div>
 
 <!-- Hero Section -->
-<div class="hero">
-    <h1>Your Home For History</h1>
-</div>
+<section class="hero">
+    <h1>Your Home for History</h1>
+    <p>
+        Learn history the way it should’ve been taught — clear timelines, real context,
+        and zero boredom. Built for students, teachers, and curious minds.
+    </p>
+
+    <div class="hero-actions">
+        <a href="/units/" class="primary-btn">Start Learning</a>
+        <a href="https://houselearning.org" class="secondary-btn">HouseLearning</a>
+    </div>
+</section>
+
+<footer>
+    © 2025-26 History Zone · A HouseLearning Project
+</footer>
 
 </body>
 </html>
